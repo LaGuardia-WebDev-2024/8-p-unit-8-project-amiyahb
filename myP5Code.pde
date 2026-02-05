@@ -3,7 +3,6 @@ setup = function() {
     size(1000, 600);
     
 
-  
     
 };
 
@@ -18,28 +17,28 @@ draw = function(){
 
   //dolphin movement
   dolphinMove ++;
-  drawDolphin(800 - dolphinMove, 200); 
-  drawDolphin(1100 - dolphinMove, 250);
+  drawDolphin(1000 - dolphinMove, 200); 
+  drawDolphin(1300 - dolphinMove, 250);
 
-  if(dolphinMove > 1300){
+  if(dolphinMove > 1500){
     dolphinMove = 0;
   }
 
   //fish movement
   fishMove ++;
-  drawFish(1000 - fishMove, 500);
-  drawFish(600 - fishMove, 300);
+  drawFish(1500 - fishMove, 400);
+  drawFish(1200 - fishMove, 300);
 
-   if(fishMove > 1300){
+   if(fishMove > 1500){
     fishMove = 0;
   }
 
   //orangefish movement
   orangeMove ++;
-  drawOrangeFish(1000 - orangeMove, 100);
-  drawOrangeFish(200 - orangeMove, 600);
+  drawOrangeFish(1200 - orangeMove, 100);
+  drawOrangeFish(1100 - orangeMove, 500);
   
-    if(orangeMove > 1300){
+    if(orangeMove > 1500){
     orangeMove = 0;
   }
 
@@ -55,23 +54,33 @@ mouseClicked = function(){
 var drawDolphin = function(dolphinX, dolphinY){
   textSize(80);
   text("🐬", dolphinX, dolphinY);
-};
+}
 
 //fish
 var drawFish = function(fishX, fishY){
   textSize(60);
   text("🐟", fishX, fishY)
 }
-
+//orangefish
 var drawOrangeFish = function(orangeX, orangeY){
   textSize(60);
   text("🐠", orangeX, orangeY)
 }
 
+//shark
+var drawShark = function(sharkX, sharkY){
+  textSize(80);
+  text("🦈", sharkX, sharkY)
+}
+
+//plant
+var drawPlant = function(plantX, plantY){
+  textSize(40);
+  text("🌷", plantX, plantY)
+}
 
 
-
-  
+ 
 
 
 
